@@ -1,27 +1,77 @@
-# NgTest1
+<p align="center">
+	<a href="https://angular.io/">
+		<img src="https://img.shields.io/static/v1?label=angular&message=front-end&color=DD0032&style=flat&logo=Angular" />	
+	</a>
+	<a href="https://jasmine.github.io/">
+		<img src="https://img.shields.io/static/v1?label=jasmine&message=behavior-driven&color=8A4182&style=flat&logo=Jasmine" />
+	</a>
+	<a href="https://www.typescriptlang.org/">
+		<img src="https://img.shields.io/static/v1?label=typescript&message=Language&color=007acc&style=flat&logo=TypeScript" />
+	</a>
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.1.
+<br/>
 
-## Development server
+### Tópicos
+- [Descrição do projeto](#clipboard-descrição-do-projeto)
+- [Desafio](#anger-desafio)
+- [Pré-requisitos](#point_right-pré-requisitos)
+- [Como rodar a aplicacão](#arrow_forward-como-rodar-a-aplicacão)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+<br/>
 
-## Code scaffolding
+## :clipboard: Descrição do projeto
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Projeto para treinar <strong>Testes Unitários</strong> utilizando Jasmine e Karma.
 
-## Build
+<br/>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## :anger: Desafio
 
-## Running unit tests
+Faça os testes unitários do que aprendemos até agora no treinamento:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- uniqueIdService
 
-## Running end-to-end tests
+<br/>
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## :point_right: Pré-requisitos
 
-## Further help
+:warning: [Node](https://nodejs.org/en/download/)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+:warning: [Angular](https://angular.io/cli)
+
+<br/>
+
+## :arrow_forward: Como rodar a aplicacão
+No terminal, clone o projeto:
+```
+git clone [https://github.com/Ariosmaia/nlw-01.git](https://github.com/Ariosmaia/unit-test-germinare.git)
+```
+<br/>
+
+Entre na pasta do projeto:
+
+<br/>
+
+ :computer: <strong>Front-end</strong>
+	
+- Instale as dependencias:
+```
+npm install
+```
+  - Execute a aplicação
+```
+ng serve
+```
+<br/>
+<br/>
+
+
+ :gear: <strong>Testes Unitários</strong>
+ 
+```
+ng test
+```
+
+---
+
