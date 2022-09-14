@@ -15,7 +15,6 @@
 ### Tópicos
 - [Descrição do projeto](#clipboard-descrição-do-projeto)
 - [Desafio](#anger-desafio)
-- [Pré-requisitos](#point_right-pré-requisitos)
 - [Como rodar a aplicacão](#arrow_forward-como-rodar-a-aplicacão)
 
 <br/>
@@ -34,13 +33,6 @@ Faça os testes unitários do que aprendemos até agora no treinamento:
 
 <br/>
 
-## :point_right: Pré-requisitos
-
-:warning: [Node](https://nodejs.org/en/download/)
-
-:warning: [Angular](https://angular.io/cli)
-
-<br/>
 
 ## :arrow_forward: Como rodar a aplicacão
 No terminal, clone o projeto:
