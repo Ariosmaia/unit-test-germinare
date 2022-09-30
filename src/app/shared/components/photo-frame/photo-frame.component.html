@@ -1,0 +1,11 @@
+<div class="c-photo-frame">
+  <img
+    class="c-photo-frame__img"
+    tabindex="0"
+    [src]="src"
+    [alt]="description"
+  />
+  <div class="c-photo-frame__like-bar">
+    <app-like-widget [likes]="likes" (liked)="like()"></app-like-widget>
+  </div>
+</div>
