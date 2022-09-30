@@ -29,7 +29,9 @@ Projeto para treinar <strong>Testes Unitários</strong> utilizando Jasmine e Kar
 
 Faça os testes unitários do que aprendemos até agora no treinamento:
 
-- uniqueIdService
+- uniqueIdService :heavy_check_mark:
+- likeWidgetComponent
+- photo-frame
 
 <br/>
 
