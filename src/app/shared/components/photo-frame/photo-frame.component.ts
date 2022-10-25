@@ -1,39 +1,21 @@
-import {
-  Component,
-  EventEmitter,
-  Input,
-  OnDestroy,
-  OnInit,
-  Output,
-} from '@angular/core';
-import { pipe, Subject } from 'rxjs';
+import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
+import { Subject } from 'rxjs';
 import { debounceTime, takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'app-photo-frame',
   templateUrl: './photo-frame.component.html',
-  styleUrls: ['./photo-frame.component.scss'],
+  styleUrls: ['./photo-frame.component.scss']
 })
 export class PhotoFrameComponent implements OnInit, OnDestroy {
-  @Output() liked: EventEmitter<void>;
-  @Input() src: string;
-  @Input() description: string;
-  @Input() likes: number;
+  @Output() public liked: EventEmitter<void> = new EventEmitter();
+  @Input() public description = '';
+  @Input() public src = '';
+  @Input() public likes = 0;
+  private debounceSubject: Subject<void> = new Subject();
+  private unsubscribe: Subject<void> = new Subject();
 
-  debounceSubject: Subject<void>;
-  unsubscribe: Subject<void>;
-
-  constructor() {
-    this.liked = new EventEmitter();
-    this.src = '';
-    this.description = '';
-    this.likes = 0;
-
-    this.debounceSubject = new Subject();
-    this.unsubscribe = new Subject();
-  }
-
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.debounceSubject
       .asObservable()
       .pipe(debounceTime(500))
@@ -41,12 +23,12 @@ export class PhotoFrameComponent implements OnInit, OnDestroy {
       .subscribe(() => this.liked.emit());
   }
 
-  ngOnDestroy(): void {
+  public ngOnDestroy(): void {
     this.unsubscribe.next();
     this.unsubscribe.complete();
   }
 
-  like(): void {
+  public like(): void {
     this.debounceSubject.next();
   }
 }
