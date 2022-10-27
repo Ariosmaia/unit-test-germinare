@@ -1,20 +1,9 @@
+import { SimpleChange, SimpleChanges } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Photo } from './models/photo.model';
 
 import { PhotoBoardComponent } from './photo-board.component';
-
-function buildPhotosList(): Photo[] {
-  const photos: Photo[] = [];
-  for (let index = 0; index < 8; index++) {
-    photos.push({
-      id: index + 1,
-      url: '',
-      description: '',
-    });
-  }
-
-  return photos;
-}
+import { buildPhotosList } from './test/build-photo-list';
 
 describe(PhotoBoardComponent.name, () => {
   let component: PhotoBoardComponent;
@@ -34,9 +23,15 @@ describe(PhotoBoardComponent.name, () => {
     expect(component).toBeTruthy();
   });
 
-  it('Should display rows and columns when (@Input phots) has value', () => {
+  it('Should display rows and columns when (@Input photos) has value', () => {
     component.photos = buildPhotosList();
     fixture.detectChanges();
+
+    const change: SimpleChanges = {
+      photos: new SimpleChange([], component.photos, true),
+    };
+
+    component.ngOnChanges(change);
 
     expect(component.rows.length).withContext('Number of rows').toBe(2);
     expect(component.rows[1].length)
