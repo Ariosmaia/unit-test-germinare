@@ -32,7 +32,8 @@ Faça os testes unitários do que aprendemos até agora no treinamento:
 - uniqueIdService :heavy_check_mark:
 - likeWidgetComponent :heavy_check_mark:
 - photo-frame :heavy_check_mark:
-- photo-board
+- photo-board :heavy_check_mark:
+- photo-list
 
 <br/>
 
